@@ -1,4 +1,4 @@
-# 💬 Chatter-Box
+# Chatter-Box
 
 **Ephemeral Real-Time Messaging Application**
 
@@ -6,7 +6,7 @@ Chatter-Box is a privacy-focused, one-to-one messaging application built with mo
 
 ---
 
-## 🚀 Features
+## Features
 
 * ⚡ **Real-time messaging** between two users
 * ⏳ **Ephemeral chat rooms** with automatic message deletion (self-destruct after 10 minutes)
@@ -16,7 +16,7 @@ Chatter-Box is a privacy-focused, one-to-one messaging application built with mo
 
 ---
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -39,7 +39,7 @@ Chatter-Box is a privacy-focused, one-to-one messaging application built with mo
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ### 1. Chat Room Creation
 
@@ -63,7 +63,7 @@ Chatter-Box is a privacy-focused, one-to-one messaging application built with mo
 
 ---
 
-## 🔐 Design Philosophy
+## Design Philosophy
 
 Chatter-Box is built around the idea of **ephemeral communication**:
 
@@ -73,7 +73,7 @@ Chatter-Box is built around the idea of **ephemeral communication**:
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone the repository
@@ -91,7 +91,7 @@ bun dev or npm run dev
 
 ---
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 Create a `.env` file and add:
 
@@ -102,30 +102,30 @@ UPSTASH_REDIS_REST_TOKEN=your_token
 
 ---
 
-## 🧪 Future Improvements
+## Future Improvements
 
-* 🔌 Improve scalability of real-time connections for high concurrency
-* 📨 Add delivery and read receipts using event acknowledgments
-* 👥 Support for group chats
-* 🔐 End-to-end encryption
-* 📩 Message status indicators (delivered/read)
-* 🕒 Custom expiration timers
+* Improve scalability of real-time connections for high concurrency
+* Add delivery and read receipts using event acknowledgments
+* Support for group chats
+* End-to-end encryption
+* Message status indicators (delivered/read)
+* Custom expiration timers
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
+## License
 
 This project is completely open-source.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Pratyaksh Gupta**
 
