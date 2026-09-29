@@ -24,7 +24,7 @@ function Home() {
   const wasDestroyed = searchParams.get("destroyed") === "true";
   const error = searchParams.get("error");
 
-  const { mutate: createRoom } = useMutation({
+  const { mutate: createRoom, isPending } = useMutation({
     mutationFn: async () => {
       const res = await client.room.create.post();
 
@@ -64,7 +64,7 @@ function Home() {
 
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-bold tracking-tight text-green-500">
-            {'>'}ChatterBox
+            {">"}ChatterBox
           </h1>
           <p className="text-zinc-500 text-sm">
             A private self-destructing chat-room.
@@ -87,9 +87,10 @@ function Home() {
 
             <button
               onClick={() => createRoom()}
+              disabled={isPending}
               className="w-full bg-zinc-100 text-black p-3 text-sm font-bold hover:bg-zinc-50 hover:text-black transition-colors mt-2 cursor-pointer disabled:opacity-50"
             >
-              Create Secure Room
+              {isPending ? "Loading..." : "Create Secure Room"}
             </button>
           </div>
         </div>
