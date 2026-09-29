@@ -127,6 +127,7 @@ const Page = () => {
 
   return (
     <main className="flex flex-col h-screen max-h-screen overflow-hidden">
+      {/* header section */}
       <header className="border-b border-zinc-800 p-4 flex items-center justify-between bg-zinc-900/30">
         <div className="flex items-center gap-4">
           <div className="flex flex-col">
@@ -170,7 +171,7 @@ const Page = () => {
         </button>
       </header>
 
-      {/* messages */}
+      {/* messages section */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin">
         {messages?.messages.length === 0 && (
           <div className="flex items-center justify-center h-full">
@@ -183,7 +184,7 @@ const Page = () => {
         {messages?.messages.map((msg) => (
           <div
             key={msg.id}
-            className="flex flex-col items-start"
+            className={`flex flex-col ${msg.sender === username ? "items-end" : "items-start"}`}
           >
             <div className="max-w-[80%] group">
               <div className="flex items-baseline gap-3 mb-1">
@@ -192,14 +193,14 @@ const Page = () => {
                 >
                   {msg.sender === username ? "YOU" : msg.sender}
                 </span>
-
-                <span className="text-zinc-600 text-[10px]">
-                  {format(msg.timestamp, "HH:mm")}
-                </span>
               </div>
 
-              <p className="text-sm text-zinc-300 leading-relaxed break-all">
+              <p className="flex flex-col text-sm text-zinc-300 leading-relaxed break-all border border-zinc-600 rounded-e-md rounded-bl-md p-1 relative min-w-16 max-w-fit">
                 {msg.text}
+
+                <span className="text-zinc-400 text-[10px] w-full text-right">
+                  {format(msg.timestamp, "HH:mm")}
+                </span>
               </p>
             </div>
           </div>
@@ -236,7 +237,7 @@ const Page = () => {
               inputRef.current?.focus();
             }}
             disabled={!input.trim() || isPending}
-            className="bg-zinc-800 text-zinc-400 px-6 text-sm font-bold hover:text-zinc-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+            className="bg-green-800 text-zinc-400 px-6 text-sm font-bold hover:text-zinc-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
           >
             SEND
           </button>
